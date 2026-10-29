@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="stroll-steam-logo.jpeg">
+    <link rel="apple-touch-icon" href="stroll-steam-logo.jpeg">
+
+    <!-- SEO Meta Tags -->
+    <title>Stroll & Steam Tours | East End Boat Excursions & Mangrove Tours in Roatan</title>
+    <meta name="description" content="Experience Roatan's vibrant East End with Stroll & Steam Tours. Enjoy mangrove tunnel boat cruises, coral reef snorkeling, Jade Beach, and Pigeon Cay shark encounters.">
+    <meta name="keywords" content="Roatan boat tours, East End Roatan, mangrove canals, Pigeon Cay shark encounter, Jade Beach, Port Royal snorkeling, Stroll and Steam Tours">
+    <link rel="canonical" href="https://strollandsteamtours.com/index.html">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://strollandsteamtours.com/index.html">
+    <meta property="og:title" content="Stroll & Steam Tours | East End Boat Excursions & Mangrove Tours in Roatan">
+    <meta property="og:description" content="Discover Roatan's hidden coast, mangrove mazes, barrier reef snorkeling, and thrilling wildlife adventures.">
+    <meta property="og:image" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+    <meta property="og:image:secure_url" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags (Bonus for sharing previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stroll & Steam Tours | East End Boat Excursions & Mangrove Tours in Roatan">
+    <meta name="twitter:description" content="Discover Roatan's hidden coast, mangrove mazes, barrier reef snorkeling, and thrilling wildlife adventures.">
+    <meta name="twitter:image" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Embedded Island-Themed Stylesheet -->
+    <style>
+        :root {
+            --primary: #0a3a40;      /* Deep Caribbean Teal */
+            --primary-dark: #041c20;
+            --accent: #e09f3e;        /* Tropical Sun Gold */
+            --accent-blue: #0077b6;   /* Water Blue */
+            --text-dark: #212529;
+            --text-light: #59656f;
+            --bg-light: #f4f9f9;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+        }
+
+        .btn-text {
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0;
+        }
+
+        .btn-text:hover {
+            color: var(--accent);
+        }
+
+        .btn-large {
+            padding: 16px 36px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Header & Navigation --- */
+        .site-header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .site-logo {
+            max-height: 65px;
+            width: auto;
+            display: block;
+        }
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(4, 28, 32, 0.5), rgba(4, 28, 32, 0.7)), url('jv-mangroves-2.jpg') center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .sub-badge {
+            display: inline-block;
+            background: rgba(224, 159, 62, 0.25);
+            border: 1px solid var(--accent);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffdda1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* --- Intro Section --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-text .lead {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .feature-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .check-item {
+            font-weight: 600;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .check-item i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* --- Tour Options Section --- */
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .tour-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .tour-img-wrap {
+            position: relative;
+            height: 220px;
+        }
+
+        .tour-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tour-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 5px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .tour-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tour-content h3 {
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .tour-route {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tour-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .tour-footer {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tour-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* --- Highlights Strip --- */
+        .highlights-section {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .highlight-box i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .highlight-box h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .highlight-box p {
+            font-size: 0.9rem;
+            color: #d1d9d9;
+        }
+
+        /* --- CTA Banner --- */
+        .cta-banner {
+            background: linear-gradient(rgba(4, 28, 32, 0.85), rgba(4, 28, 32, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .cta-banner h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-banner p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Footer Styles --- */
+        .site-footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            max-height: 85px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #adb5bd;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info-list p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+        }
+
+        .contact-info-list strong {
+            color: var(--white);
+        }
+
+        .contact-info-list i {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Media Queries --- */
+        @media (max-width: 992px) {
+            .grid-2, .grid-3, .footer-grid, .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .main-nav.active {
+                max-height: 350px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="stroll-steam-logo.jpeg" alt="Stroll & Steam Tours Logo" class="site-logo">
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-content">
+                <span class="sub-badge"><i class="fa-solid fa-anchor"></i> Roatán, Honduras • East End Adventures</span>
+                <h1>Discover the Wild Coast of Roatán</h1>
+                <p>Glide through lush mangrove tunnels, snorkel vibrant coral reefs, swim at Jade Beach, and experience an unforgettable Pigeon Cay shark encounter.</p>
+                <div class="hero-actions">
+                    <a href="tours.html" class="btn btn-primary">Explore Tour Options</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us / Book</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Strip -->
+        <section class="highlights-section">
+            <div class="container highlights-grid">
+                <div class="highlight-box">
+                    <i class="fa-solid fa-water"></i>
+                    <h4>Mangrove Tunnels</h4>
+                    <p>Navigate the winding waterways of Jonesville & St. Helen.</p>
+                </div>
+                <div class="highlight-box">
+                    <i class="fa-solid fa-fish-fins"></i>
+                    <h4>Reef Snorkeling</h4>
+                    <p>Explore crystal-clear Caribbean barrier reefs like Cow and Calf.</p>
+                </div>
+                <div class="highlight-box">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                    <h4>East End Shores</h4>
+                    <p>Relax on pristine, quiet island beaches and coastal waters.</p>
+                </div>
+                <div class="highlight-box">
+                    <i class="fa-solid fa-compass"></i>
+                    <h4>Flavors & Culture</h4>
+                    <p>Experience local Caribbean dining and Punta Gorda Garifuna heritage.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro / Welcome Section -->
+        <section class="intro-section section-padding">
+            <div class="container grid-2">
+                <div class="intro-text">
+                    <h2>Your Ultimate East End Island Escape</h2>
+                    <p class="lead">Led by internationally certified Boat Captain Yusef Ben Allam Gough, Stroll & Steam Tours takes you beyond the usual tourist spots into the breathtaking natural heart of Roatán.</p>
+                    <p>From cruise port pickups in Coxen Hole to scenic drives across the island's vibrant East End, we combine expert local navigation, traditional fishing village culture, and incredible seaside dining.</p>
+                    <div class="feature-checklist">
+                        <div class="check-item"><i class="fa-solid fa-circle-check"></i> Certified Expert Captain & Crew</div>
+                        <div class="check-item"><i class="fa-solid fa-circle-check"></i> Custom Small-Group Itineraries</div>
+                        <div class="check-item"><i class="fa-solid fa-circle-check"></i> Authentic Local Restaurant & Cultural Stops</div>
+                    </div>
+                </div>
+                <div class="intro-image-grid">
+                    <img src="east-side-roatan.jpg" alt="Roatan boat tour waters" class="img-fluid shadow-lg" style="border-radius: 8px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tours Section -->
+        <section class="featured-tours section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Exclusive Tour Options</h2>
+                    <p>Choose your ideal adventure on the water</p>
+                </div>
+                <div class="grid-3">
+                    <!-- Tour 1 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrap">
+                            <img src="oak-ridge-1.jpg" alt="Mangrove Express">
+                            <span class="tour-badge">Popular</span>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <div class="tour-route">Port → Mangroves → Flavors → Culture</div>
+                                <h3>East End & Mangrove Express</h3>
+                                <p>Cruise through Oakridge & Jonesville mangrove tunnels, experience fishing-village life, enjoy local seaside dining at On the Rocks, and visit Punta Gorda.</p>
+                            </div>
+                            <div class="tour-footer" style="justify-content: flex-end;">
+                                <a href="tours.html" class="btn btn-text">Click to See More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 2 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrap">
+                            <img src="jv-mangroves-1.jpg" alt="Snorkeling and Mangroves">
+                            <span class="tour-badge">Best Value</span>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <div class="tour-route">Mangroves → 45-Min Snorkel → Flavors</div>
+                                <h3>Snorkeling & Mangrove Adventure</h3>
+                                <p>Combine a scenic mangrove boat cruise with 45 minutes of snorkeling above a vibrant coral reef, plus island food and drinks at On the Rocks Restaurant.</p>
+                            </div>
+                            <div class="tour-footer" style="justify-content: flex-end;">
+                                <a href="tours.html" class="btn btn-text">Click to See More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3 -->
+                    <div class="tour-card">
+                        <div class="tour-img-wrap">
+                            <img src="port-royal.jpg" alt="Old Port Royal Tour">
+                            <span class="tour-badge">Ultimate</span>
+                        </div>
+                        <div class="tour-content">
+                            <div>
+                                <div class="tour-route">Port → Mangroves → Port Royal → Cow & Calf → Punta Gorda</div>
+                                <h3>Old Port Royal Tour</h3>
+                                <p>Journey through Roatán's rich history and east-end beauty, featuring scenic mangrove canals, historical Port Royal waters, reef snorkeling at Cow and Calf, local dining, and Garifuna cultural sights.</p>
+                            </div>
+                            <div class="tour-footer" style="justify-content: flex-end;">
+                                <a href="tours.html" class="btn btn-text">Click to See More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="cta-banner section-padding text-center">
+            <div class="container">
+                <h2>Let's Plan Your Roatán Adventure</h2>
+                <p>Have questions about availability, custom tour arrangements, or cruise port schedules? Get in touch with Jerick or Captain Yusef today!</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo-wrap">
+                        <img src="stroll-steam-logo-removebg.png" alt="Stroll & Steam Tours Logo" class="footer-logo">
+                        <p style="color: #adb5bd; margin-bottom: 0;">Immersive East End boat excursions, mangrove mazes, and unforgettable marine adventures in Roatán, Honduras.</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+<div class="footer-col">
+    <h4>Contact & Team</h4>
+    <div class="contact-info-list">
+        <p><i class="fa-solid fa-user-tie"></i> <strong>Admin:</strong> Jerick Allam Gough</p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431718304" target="_blank">+504 3171-8304</a></p>
+        
+        <p><i class="fa-solid fa-user-tie"></i> <strong>Capt.:</strong> Yusef Allam Gough</p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431907292" target="_blank">+504 3190-7292</a></p>
+        
+        <p><i class="fa-solid fa-envelope"></i> info@strollandsteamtours.com</p>
+    </div>
+</div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stroll & Steam Tours. All rights reserved. Powered by Borden Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (mobileToggle && mainNav) {
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

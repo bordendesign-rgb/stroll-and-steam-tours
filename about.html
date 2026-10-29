@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="stroll-steam-logo.jpeg">
+    <link rel="apple-touch-icon" href="stroll-steam-logo.jpeg">
+
+    <!-- SEO Meta Tags -->
+    <title>About Us | Stroll & Steam Tours | Roatan East End Experts</title>
+    <meta name="description" content="Meet the team behind Stroll & Steam Tours. Discover our passion for showcasing Roatan's authentic East End, mangrove canals, and unforgettable marine adventures.">
+    <meta name="keywords" content="About Stroll and Steam Tours, Roatan tour operators, East End guides, local boat captains Roatan">
+    <link rel="canonical" href="https://strollandsteamtours.com/about.html">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://strollandsteamtours.com/about.html">
+    <meta property="og:title" content="About Us | Stroll & Steam Tours | Roatan East End Experts">
+    <meta property="og:description" content="Meet the team behind Stroll & Steam Tours and learn about our passion for Roatan's pristine East End.">
+    <meta property="og:image" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+    <meta property="og:image:secure_url" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card Meta Tags (Bonus for sharing previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Stroll & Steam Tours | Roatan East End Experts">
+    <meta name="twitter:description" content="Meet the team behind Stroll & Steam Tours and learn about our passion for Roatan's pristine East End.">
+    <meta name="twitter:image" content="https://strollandsteamtours.com/stroll-steam-logo.jpeg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Embedded Island-Themed Stylesheet (Locked to Match Home Page) -->
+    <style>
+        :root {
+            --primary: #0a3a40;      /* Deep Caribbean Teal */
+            --primary-dark: #041c20;
+            --accent: #e09f3e;       /* Tropical Sun Gold */
+            --accent-blue: #0077b6;   /* Water Blue */
+            --text-dark: #212529;
+            --text-light: #59656f;
+            --bg-light: #f4f9f9;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+        }
+
+        /* --- Header & Navigation --- */
+        .site-header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .site-logo {
+            max-height: 65px;
+            width: auto;
+            display: block;
+        }
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* --- Page Header Banner --- */
+        .page-header-section {
+            position: relative;
+            background: linear-gradient(rgba(4, 28, 32, 0.6), rgba(4, 28, 32, 0.75)), url('port-royal-2.jpg') center/cover no-repeat;
+            padding: 100px 0;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .page-header-content h1 {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .page-header-content p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Grid Layouts --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text .lead {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* --- Team Cards --- */
+        .team-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 4px solid var(--accent);
+        }
+
+        .team-card i.avatar-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            background: var(--bg-light);
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            border-radius: 50%;
+        }
+
+        .team-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .team-card p {
+            color: var(--text-light);
+            font-size: 0.95px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Values Section --- */
+        .values-section {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .values-section h2 {
+            color: var(--white);
+        }
+
+        .value-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .value-box i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .value-box h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .value-box p {
+            color: #d1d9d9;
+            font-size: 0.95rem;
+        }
+
+        /* --- Footer Styles --- */
+        .site-footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            max-height: 85px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #adb5bd;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info-list p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+        }
+
+        .contact-info-list strong {
+            color: var(--white);
+        }
+
+        .contact-info-list i {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Media Queries --- */
+        @media (max-width: 992px) {
+            .grid-2, .grid-3, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .main-nav.active {
+                max-height: 350px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .page-header-content h1 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="stroll-steam-logo.jpeg" alt="Stroll & Steam Tours Logo" class="site-logo">
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header-section">
+            <div class="container page-header-content">
+                <h1>About Stroll & Steam Tours</h1>
+                <p>Rooted in the rich maritime heritage of Roatán's East End, providing safe, personalized, and unforgettable coastal excursions.</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="section-padding">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <h2>Our Island Roots & Story</h2>
+                    <p class="lead">Born and raised amidst the winding waterways and fishing traditions of Roatán's East End, Stroll & Steam Tours offers a genuine look into island life.</p>
+                    <p>We take pride in guiding travelers far beyond the crowded commercial areas, offering direct access to the hidden labyrinths of Jonesville and Oakridge mangroves, pristine barrier reefs, and historic coastal communities like Port Royal and Punta Gorda.</p>
+                    <p>Whether you're stepping off a cruise ship in Coxen Hole or staying on the island, our mission is to treat every guest like family while maintaining the highest standards of safety, professionalism, and environmental respect.</p>
+                </div>
+                <div>
+                    <img src="oak-ridge-2.jpg" alt="Roatan boat cruising" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 50px;">
+                    <h2>Meet Our Leadership Team</h2>
+                    <p>The experienced hands and warm hearts behind your adventures</p>
+                </div>
+                <div class="grid-2" style="max-width: 900px; margin: 0 auto;">
+                    <!-- Captain Yusef -->
+                    <div class="team-card">
+                        <i class="fa-solid fa-user-tie avatar-icon"></i>
+                        <h3>Yusef Ben Allam Gough</h3>
+                        <div class="team-role">Certified Boat Captain & Guide</div>
+                        <p>An internationally certified captain with unmatched knowledge of Roatán's tricky reef systems, mangrove mazes, and coastal wildlife habitats. Your safety and enjoyment on the water are his top priorities.</p>
+                    </div>
+                    <!-- Jerick Gough -->
+                    <div class="team-card">
+                        <i class="fa-solid fa-headset avatar-icon"></i>
+                        <h3>Jerick Allam Gough</h3>
+                        <div class="team-role">Reservations & Administration</div>
+                        <p>The organizing force behind your bookings, logistics, and cruise port coordination. Jerick ensures your itinerary runs seamlessly from the moment you inquire until you head back to port.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="values-section section-padding">
+            <div class="container">
+                <div class="section-header text-center" style="margin-bottom: 50px;">
+                    <h2>Why Travel With Us</h2>
+                    <p style="color: #d1d9d9;">Our commitment to you and our island home</p>
+                </div>
+                <div class="grid-3">
+                    <div class="value-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Safety First</h4>
+                        <p>Fully certified navigation, top-tier equipment, and deep local expertise ensure your family is secure throughout every excursion.</p>
+                    </div>
+                    <div class="value-box">
+                        <i class="fa-solid fa-heart"></i>
+                        <h4>Authentic Hospitality</h4>
+                        <p>Experience genuine warmth, local storytelling, and hand-crafted itineraries that showcase the true cultural spirit of Roatán.</p>
+                    </div>
+                    <div class="value-box">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h4>Eco-Conscious Exploration</h4>
+                        <p>We respect and protect our delicate barrier reefs, marine life, and mangrove ecosystems so future generations can enjoy them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo-wrap">
+                        <img src="stroll-steam-logo-removebg.png" alt="Stroll & Steam Tours Logo" class="footer-logo">
+                        <p style="color: #adb5bd; margin-bottom: 0;">Immersive East End boat excursions, mangrove mazes, and unforgettable marine adventures in Roatán, Honduras.</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+    <h4>Contact & Team</h4>
+    <div class="contact-info-list">
+        <p><i class="fa-solid fa-user-tie"></i> <strong>Admin:</strong> Jerick Allam Gough</p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431718304" target="_blank">+504 3171-8304</a></p>
+        
+        <p><i class="fa-solid fa-user-tie"></i> <strong>Capt.:</strong> Yusef Allam Gough</p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431907292" target="_blank">+504 3190-7292</a></p>
+        
+        <p><i class="fa-solid fa-envelope"></i> info@strollandsteamtours.com</p>
+    </div>
+</div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stroll & Steam Tours. All rights reserved. Powered by Borden Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (mobileToggle && mainNav) {
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

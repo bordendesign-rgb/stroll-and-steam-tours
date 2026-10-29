@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="stroll-steam-logo.jpeg">
+    <link rel="apple-touch-icon" href="stroll-steam-logo.jpeg">
+
+    <!-- SEO & Page Meta -->
+    <title>Thank You for Booking | Stroll & Steam Tours</title>
+    <meta name="description" content="Thank you for booking your Roatán excursion with Stroll & Steam Tours! We've received your payment and look forward to hosting you.">
+    <link rel="canonical" href="https://strollandsteamtours.com/thank-you.html">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Embedded Island-Themed Stylesheet -->
+    <style>
+        :root {
+            --primary: #0a3a40;      /* Deep Caribbean Teal */
+            --primary-dark: #041c20;
+            --accent: #e09f3e;        /* Tropical Sun Gold */
+            --accent-blue: #0077b6;   /* Water Blue */
+            --text-dark: #212529;
+            --text-light: #59656f;
+            --bg-light: #f4f9f9;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        .site-header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .site-logo {
+            max-height: 65px;
+            width: auto;
+            display: block;
+        }
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent) !important;
+            color: var(--primary-dark) !important;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* --- Page Header Banner --- */
+        .page-header {
+            background: linear-gradient(rgba(4, 28, 32, 0.75), rgba(4, 28, 32, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 80px 0;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* --- Thank You Section Layout --- */
+        .thank-you-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .thank-you-card {
+            background: var(--white);
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid rgba(10, 58, 64, 0.08);
+        }
+
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #eef7f8;
+            color: var(--primary);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .thank-you-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .thank-you-card p.lead {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        .next-steps-box {
+            background: #fafbfc;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 25px;
+            text-align: left;
+            margin-bottom: 35px;
+        }
+
+        .next-steps-box h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .next-steps-box ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .next-steps-box ul li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--accent);
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-home:hover {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        /* --- Footer Styles --- */
+        .site-footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            max-height: 85px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #adb5bd;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .contact-info-list p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #adb5bd;
+        }
+
+        .contact-info-list strong {
+            color: var(--white);
+        }
+
+        .contact-info-list i {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Media Queries --- */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .main-nav.active {
+                max-height: 350px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="stroll-steam-logo.jpeg" alt="Stroll & Steam Tours Logo" class="site-logo">
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header Banner -->
+        <header class="page-header">
+            <div class="container">
+                <h1>Reservation Confirmed!</h1>
+                <p>We are thrilled to welcome you on board for an unforgettable Roatán island experience.</p>
+            </div>
+        </header>
+
+        <!-- Thank You Card Section -->
+        <section class="thank-you-section">
+            <div class="container">
+                <div class="thank-you-card">
+                    <div class="thank-you-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h2>Thank You for Your Booking!</h2>
+                    <p class="lead">We have received your payment and reservation request. A confirmation email has been logged to our team, and we will finalize your pickup details shortly.</p>
+
+                    <div class="next-steps-box">
+                        <h3><i class="fa-solid fa-compass"></i> What Happens Next?</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-envelope"></i> <strong>Check Your Inbox:</strong> PayPal will send a receipt for your transaction to your email address.</li>
+                            <li><i class="fa-solid fa-calendar-check"></i> <strong>Tour Confirmation:</strong> Jerick or Captain Yusef will double-check your arrival ship/hotel schedule and reach out via email or WhatsApp if needed.</li>
+                            <li><i class="fa-solid fa-comments"></i> <strong>Need Instant Support?</strong> Message us on WhatsApp anytime at <a href="https://wa.me/50431907292" target="_blank" style="color: var(--primary); font-weight: 600;">+504 3190-7292</a> or <a href="https://wa.me/50431718304" target="_blank" style="color: var(--primary); font-weight: 600;">+504 3171-8304</a>.</li>
+                        </ul>
+                    </div>
+
+                    <a href="index.html" class="btn-home">
+                        <i class="fa-solid fa-house"></i> Return to Home Page
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="footer-logo-wrap">
+                        <img src="stroll-steam-logo-removebg.png" alt="Stroll & Steam Tours Logo" class="footer-logo">
+                        <p style="color: #adb5bd; margin-bottom: 0;">Immersive East End boat excursions, mangrove mazes, and unforgettable marine adventures in Roatán, Honduras.</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact & Team</h4>
+                    <div class="contact-info-list">
+                        <p><i class="fa-solid fa-user-tie"></i> <strong>Admin:</strong> Jerick Allam Gough</p>
+                        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431718304" target="_blank">+504 3171-8304</a></p>
+                        
+                        <p><i class="fa-solid fa-user-tie"></i> <strong>Capt.:</strong> Yusef Allam Gough</p>
+                        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/50431907292" target="_blank">+504 3190-7292</a></p>
+                        
+                        <p><i class="fa-solid fa-envelope"></i> info@strollandsteamtours.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stroll & Steam Tours. All rights reserved. Powered by Borden Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript: Mobile Menu Toggle -->
+    <script>
+        const mobileToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        if (mobileToggle && mainNav) {
+            mobileToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
