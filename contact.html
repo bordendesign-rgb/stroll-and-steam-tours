@@ -148,7 +148,7 @@
 
         /* --- Page Header Banner --- */
         .page-header {
-            background: linear-gradient(rgba(4, 28, 32, 0.75), rgba(4, 28, 32, 0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(4, 28, 32, 0.75), rgba(4, 28, 32, 0.85)), url('jonesville.mangroves.jpg') center/cover no-repeat;
             padding: 80px 0;
             color: var(--white);
             text-align: center;
@@ -889,9 +889,9 @@
         const arrivalInput = document.getElementById('arrival-details');
 
         if (tourSelect.value === 'general') {
-            // General Inquiry Mode
+            // General Inquiry Mode - Explicitly point action to thank-you.html to prevent 404s
             tourFields.style.display = 'none';
-            form.action = ''; // Submits via Netlify/standard form submission
+            form.action = 'thank-you.html'; 
             
             dateInput.required = false;
             arrivalInput.required = false;
