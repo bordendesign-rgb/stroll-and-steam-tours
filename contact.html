@@ -661,14 +661,8 @@
                     <!-- Combined Inquiry & PayPal Checkout Form -->
 <form id="booking-form" method="POST" data-netlify="true" name="contact-booking">
     <!-- PayPal Hidden Config Fields -->
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="info@strollandsteamtours.com">
-    <input type="hidden" name="currency_code" value="USD">
     <input type="hidden" name="item_name" id="paypal-item-name" value="Stroll & Steam Tour Booking">
     <input type="hidden" name="amount" id="paypal-amount" value="0.00">
-    <input type="hidden" name="no_shipping" value="1">
-    <input type="hidden" name="return" value="https://strollandsteamtours.com/thank-you.html">
-    <input type="hidden" name="cancel_return" value="https://strollandsteamtours.com/contact.html?status=cancelled">
     <input type="hidden" name="form-name" value="contact-booking">
 
     <div class="form-group">
@@ -889,7 +883,7 @@
         const arrivalInput = document.getElementById('arrival-details');
 
         if (tourSelect.value === 'general') {
-            // General Inquiry Mode - Netlify handles form submission inline with default success message
+            // General Inquiry Mode
             tourFields.style.display = 'none';
             form.action = ''; 
             form.method = 'POST';
@@ -904,7 +898,7 @@
             const paypalAmt = document.getElementById('paypal-amount');
             if (paypalAmt) paypalAmt.value = '0.00';
         } else {
-            // PayPal Tour Checkout Mode - Directs to PayPal gateway
+            // PayPal Tour Checkout Mode
             tourFields.style.display = 'block';
             form.action = 'https://www.paypal.com/cgi-bin/webscr';
             form.method = 'POST';
@@ -1014,11 +1008,11 @@
         if (form) {
             form.addEventListener('submit', (e) => {
                 if (tourSelect.value === 'general') {
-                    // Let general inquiries post natively to Netlify
+                    // General inquiry - posts cleanly to Netlify with zero PayPal baggage
                     form.action = '';
                     form.method = 'POST';
                 } else {
-                    // For tours: save lead to Netlify via background fetch, then route to PayPal
+                    // Tour booking - capture lead in Netlify first, then inject PayPal fields dynamically
                     e.preventDefault();
                     
                     const formData = new FormData(form);
@@ -1028,9 +1022,30 @@
                         body: new URLSearchParams(formData).toString()
                     }).catch(err => console.error('Netlify capture error:', err));
 
-                    // Programmatically trigger PayPal redirect checkout
+                    // Dynamically create and append PayPal required fields so they never touch Netlify's build-time parser
                     form.action = 'https://www.paypal.com/cgi-bin/webscr';
                     form.method = 'POST';
+
+                    const paypalConfigs = {
+                        'cmd': '_xclick',
+                        'business': 'info@strollandsteamtours.com',
+                        'currency_code': 'USD',
+                        'no_shipping': '1',
+                        'return': 'https://strollandsteamtours.com/thank-you.html',
+                        'cancel_return': 'https://strollandsteamtours.com/contact.html?status=cancelled'
+                    };
+
+                    for (const [key, value] of Object.entries(paypalConfigs)) {
+                        let input = form.querySelector(`input[name="${key}"]`);
+                        if (!input) {
+                            input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = key;
+                            form.appendChild(input);
+                        }
+                        input.value = value;
+                    }
+
                     HTMLFormElement.prototype.submit.call(form);
                 }
             });
