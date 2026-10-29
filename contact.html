@@ -659,7 +659,7 @@
                     </div>
 
                     <!-- Combined Inquiry & PayPal Checkout Form -->
-<form id="booking-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" data-netlify="true" name="contact-booking">
+<form id="booking-form" method="POST" data-netlify="true" name="contact-booking">
     <!-- PayPal Hidden Config Fields -->
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="info@strollandsteamtours.com">
@@ -889,7 +889,7 @@
         const arrivalInput = document.getElementById('arrival-details');
 
         if (tourSelect.value === 'general') {
-            // General Inquiry Mode - Submits via Netlify AJAX fetch
+            // General Inquiry Mode - Netlify handles form submission inline with default success message
             tourFields.style.display = 'none';
             form.action = ''; 
             form.method = 'POST';
@@ -1010,27 +1010,28 @@
             tourSelect.value = 'general';
         }
 
-        // Intercept form submission for Netlify form capture on general inquiries
+        // Intercept form submission to handle both Netlify (general) and PayPal (tours) cleanly
         if (form) {
             form.addEventListener('submit', (e) => {
                 if (tourSelect.value === 'general') {
+                    // Let general inquiries post natively to Netlify
+                    form.action = '';
+                    form.method = 'POST';
+                } else {
+                    // For tours: save lead to Netlify via background fetch, then route to PayPal
                     e.preventDefault();
-                    const formData = new FormData(form);
                     
+                    const formData = new FormData(form);
                     fetch('/', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                         body: new URLSearchParams(formData).toString()
-                    })
-                    .then(() => {
-                        alert('Thank you! Your message has been sent successfully.');
-                        form.reset();
-                        updateFormMode();
-                    })
-                    .catch((error) => {
-                        alert('Form submission failed. Please try again.');
-                        console.error(error);
-                    });
+                    }).catch(err => console.error('Netlify capture error:', err));
+
+                    // Programmatically trigger PayPal redirect checkout
+                    form.action = 'https://www.paypal.com/cgi-bin/webscr';
+                    form.method = 'POST';
+                    HTMLFormElement.prototype.submit.call(form);
                 }
             });
         }
