@@ -642,13 +642,18 @@
 
                     <div class="form-group">
                         <label for="avatar">Upload Your Photo</label>
-                        <div class="file-upload-wrapper">
-                            <input type="file" id="avatar" name="avatar" accept="image/*">
-                            <div class="file-upload-text">
+                        <div class="file-upload-wrapper" style="position: relative; cursor: pointer;">
+                            <input type="file" id="avatar" name="avatar" accept="image/*" style="position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 2;">
+                            <div class="file-upload-text" id="file-upload-display">
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
-                                <span>Click or drag your photo here</span>
+                                <span id="file-upload-label">Click or drag your photo here</span>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Review Subject / Title</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="e.g., Best mangrove tour in Roatan!" required>
                     </div>
 
                     <div class="form-group">
@@ -659,6 +664,18 @@
                     <button type="submit" class="btn-submit">Publish Review</button>
                 </form>
             </section>
+
+            <script>
+                // Instant file name preview script for the review form
+                document.getElementById('avatar').addEventListener('change', function(e) {
+                    const fileNameSpan = document.getElementById('file-upload-label');
+                    if (this.files && this.files.length > 0) {
+                        fileNameSpan.innerHTML = `<i class="fa-solid fa-check" style="color: #28a745;"></i> Selected: <strong>${this.files[0].name}</strong>`;
+                    } else {
+                        fileNameSpan.textContent = 'Click or drag your photo here';
+                    }
+                });
+            </script>
 
             <!-- Right Column: 2 Placeholder Reviews with Faces -->
             <div class="reviews-feed">
