@@ -889,9 +889,10 @@
         const arrivalInput = document.getElementById('arrival-details');
 
         if (tourSelect.value === 'general') {
-            // General Inquiry Mode - Explicitly point action to thank-you.html to prevent 404s
+            // General Inquiry Mode - Submits via Netlify AJAX fetch
             tourFields.style.display = 'none';
-            form.action = 'thank-you.html'; 
+            form.action = ''; 
+            form.method = 'POST';
             
             dateInput.required = false;
             arrivalInput.required = false;
@@ -903,9 +904,10 @@
             const paypalAmt = document.getElementById('paypal-amount');
             if (paypalAmt) paypalAmt.value = '0.00';
         } else {
-            // PayPal Tour Checkout Mode
+            // PayPal Tour Checkout Mode - Directs to PayPal gateway
             tourFields.style.display = 'block';
             form.action = 'https://www.paypal.com/cgi-bin/webscr';
+            form.method = 'POST';
             
             dateInput.required = true;
             arrivalInput.required = true;
@@ -991,6 +993,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const tourParam = urlParams.get('tour');
         const tourSelect = document.getElementById('tour-selection');
+        const form = document.getElementById('booking-form');
 
         if (tourParam) {
             const lowerParam = tourParam.toLowerCase();
@@ -1005,6 +1008,31 @@
             }
         } else {
             tourSelect.value = 'general';
+        }
+
+        // Intercept form submission for Netlify form capture on general inquiries
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                if (tourSelect.value === 'general') {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                    .then(() => {
+                        alert('Thank you! Your message has been sent successfully.');
+                        form.reset();
+                        updateFormMode();
+                    })
+                    .catch((error) => {
+                        alert('Form submission failed. Please try again.');
+                        console.error(error);
+                    });
+                }
+            });
         }
 
         // Attach listeners to form elements
